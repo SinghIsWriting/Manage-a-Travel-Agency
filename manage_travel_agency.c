@@ -1,19 +1,7 @@
-/*
-
-You manage a travel agency and you want your drivers to input their following details:
-1. Name
-2. Driving License no.
-3. Route
-4. Kms
-Your program should be able to take n=3 as input and your driver will start inputting their details ine by one.
-
-Your program should print details of the drivers of the drivers in a beautiful fashion.
-
-*/
-
 #include <stdio.h>
 #include <string.h>
 
+// Defining a structure named Drivers that contains name, route of travel, DL number and distance convered in travel
 typedef struct Drivers{
     int kms;
     char name[30];
@@ -24,9 +12,11 @@ typedef struct Drivers{
 int main()
 {
     printf("Details of activities of Drivers of ABC pvt. ltd.\n\n");
-    int n=3;
+
+    // Declaring three instance of Drivers structures
     drs driver0, driver1, driver2;
 
+    // Taking user input and setting the info about the first driver
     printf("Enter details of first driver below: \n");
     printf("Your name: \n");
     gets(driver0.name);
@@ -40,6 +30,7 @@ int main()
     printf("Driving distance(in kms): \n");
     scanf("%d", &driver0.kms);
 
+    // Taking user input and setting the info about the second driver
     printf("Enter details of second driver below: \n");
     printf("Your name: \n");
     gets(driver1.name);
@@ -53,6 +44,7 @@ int main()
     printf("Driving distance(in kms): \n");
     scanf("%d", &driver1.kms);
 
+    // Taking user input and setting the info about the third driver
     printf("Enter details of third driver below: \n");
     printf("Your name: \n");
     gets(driver2.name);
@@ -66,6 +58,7 @@ int main()
     printf("Driving distance(in kms): \n");
     scanf("%d", &driver2.kms);
 
+    // Displaying the information of all the three drivers
     printf("********* Information of Drivers *********\n");
     printf("\nDetails of first Driver\n");
     // printf("Name: %s\n", driver0.name);
